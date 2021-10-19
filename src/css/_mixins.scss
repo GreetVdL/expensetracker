@@ -1,0 +1,39 @@
+// Use mixins like this: @include make-col(4, 20px);
+
+@mixin make-col($cols, $gap) {
+  display: flex;
+  flex-wrap: wrap;
+
+  > *:nth-child(1n + 0) {
+    margin: 0 $gap $gap 0;
+    width: calc((100% - #{($cols - 1) * $gap}) / #{$cols});
+  }
+
+  > *:nth-child(#{$cols}n + 0) {
+    margin-right: 0;
+  }
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  width: 100%;
+  padding-top: ($height / $width) * 100%; // Set the element’s vertical padding to be (h / w) * 100 percent, for an aspect ratio of w:h.
+  > * {
+    position: absolute;
+  }
+}
+
+// Use % placeholder selector like this: @extend %image;
+
+%responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
