@@ -25,6 +25,7 @@
     font-size: 2.8rem;
     border-radius: 10px;
     padding: 0 10px;
+    border: 1px solid lightgrey;
   }
   button {
     align-self: flex-end;
@@ -33,5 +34,8 @@
     font-size: 2.7rem;
     font-weight: 500;
     border-radius: 10px;
+  }
+  &.invalid {
+    border: 3px solid red;
   }
 }

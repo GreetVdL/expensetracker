@@ -6,7 +6,7 @@ const ExpensesTotal = (props) => {
   return (
     <div className="expensesTotal">
       <p className="expensesTotal__text">Total:</p>
-      <p className="expensesTotal__amount">{total} $</p>
+      <p className="expensesTotal__amount">{total || 0} $</p>
     </div>
   );
 };

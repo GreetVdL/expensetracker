@@ -3,25 +3,36 @@ import { useState } from "react";
 import "./NewExpense.scss";
 
 const NewExpense = (props) => {
+  const [isValid, setIsValid] = useState(true);
   const [newItem, setNewItem] = useState("");
   const [newAmount, setNewAmount] = useState("");
 
   const onTextChangeHandler = (event) => {
     const item = event.target.value;
     setNewItem(item);
+    setIsValid(true);
   };
   const onAmountChangeHandler = (event) => {
     const amount = +event.target.value;
     setNewAmount(amount);
+    setIsValid(true);
   };
   const onSubmitHandler = (event) => {
     event.preventDefault();
+
+    if (newItem === "" || newAmount === "") {
+      setIsValid(false);
+      return;
+    }
     props.onAddItem({ id: nanoid(), text: newItem, amount: newAmount });
     setNewItem("");
     setNewAmount("");
   };
   return (
-    <form className="newExpense" onSubmit={onSubmitHandler}>
+    <form
+      className={`newExpense ${!isValid ? "invalid" : ""}`}
+      onSubmit={onSubmitHandler}
+    >
       <div className="newExpense__text">
         <label htmlFor="text">New expense:</label>
         <input
