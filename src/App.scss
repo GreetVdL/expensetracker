@@ -27,3 +27,34 @@ html {
     }
   }
 }
+
+@media screen and (max-width: 1276px) {
+  .app {
+    .tracker {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 946px) {
+  .app {
+    .tracker {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 628px) {
+  html {
+    body {
+      font-size: 2rem;
+    }
+  }
+  .app {
+    .tracker {
+      header {
+        font-size: 4rem;
+      }
+    }
+  }
+}
