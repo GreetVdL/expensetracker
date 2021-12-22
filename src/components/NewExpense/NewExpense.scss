@@ -30,10 +30,10 @@
   button {
     align-self: flex-end;
     padding: 10px 24px;
-    border: none;
+    border: 3px solid black;
     font-size: 2.7rem;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 12px;
   }
   &.invalid {
     border: 3px solid red;
@@ -52,6 +52,7 @@
   .newExpense {
     input {
       width: 100%;
+      font-size: 2rem;
     }
   }
 }

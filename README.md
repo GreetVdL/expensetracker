@@ -6,7 +6,7 @@ This is my first real React exercise.
 
 **Deployment:**
 
-[https://GreetVdL.github.io/expensetracker](https://GreetVdL.github.io/expensetracker).
+[https://GreetVdL.github.io/expensetracker](https://GreetVdL.github.io/expensetracker)
 
 **Functionality:**
 
