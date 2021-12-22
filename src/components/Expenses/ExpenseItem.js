@@ -1,10 +1,10 @@
 import "./ExpenseItem.scss";
 
-const ExpenseItem = () => {
+const ExpenseItem = (props) => {
   return (
     <li className="expenses__item">
-      <div className="expenses__item__description">new computer mouse</div>
-      <div className="expenses__item__amount">50 $</div>
+      <div className="expenses__item__description">{props.text}</div>
+      <div className="expenses__item__amount">{props.amount} $</div>
     </li>
   );
 };
