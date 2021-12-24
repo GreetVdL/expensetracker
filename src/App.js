@@ -1,5 +1,4 @@
 // import logo from "./logo.svg";
-import { nanoid } from "nanoid";
 import { useState } from "react";
 import "./App.scss";
 import ExpensesList from "./components/Expenses/ExpensesList";
